@@ -1,0 +1,117 @@
+:root {
+  --blue: #004c9b;
+  --gold: #ffdc00;
+  --navy: #1a3d6d;
+  --white: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: var(--navy);
+  color: var(--white);
+}
+.nav {
+  background: var(--blue);
+  padding: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+.nav a.active {
+  text-decoration: underline;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.hero-img {
+  background: url('hero-image.png') center center / cover no-repeat;
+}
+.overlay {
+  padding: 0 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+}
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--navy);
+  background: var(--gold);
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,.2);
+}
+.page {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+.events-table th, .events-table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: left;
+}
+.events-table th {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.team-member {
+  background-color: var(--blue);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--white);
+}
+.photo-placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.description {
+  font-size: 0.95rem;
+}
